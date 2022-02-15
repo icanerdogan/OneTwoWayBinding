@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.icanerdogan.oneandtwowaybinding.viewmodel.MainViewModel" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/textViewFruit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="40sp"
+            android:gravity="center"
+            android:layout_marginTop="70dp"
+            android:hint="@string/random_fruit_name"
+            android:background="@color/teal_200"
+            android:textColor="@color/black"
+            android:text="@{viewmodel.currentRandomFruitName}"/>
+
+        <Button
+            android:id="@+id/buttonRandomFruit"
+            android:layout_width="200dp"
+            android:layout_height="70dp"
+            android:onClick="@{() -> viewmodel.onChangeRandomFruitClick()}"
+            android:textSize="20sp"
+            android:textAllCaps="false"
+            android:layout_margin="20dp"
+            android:text="@string/change_fruit"
+            android:layout_gravity="center"/>
+        <!-- @= Bu kullanım Two Way Binding ile ilgilidir!-->
+        <EditText
+            android:id="@+id/editTextFruitName"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:text="@={viewmodel.editTextContent}"
+            android:textSize="20sp"
+            android:layout_margin="20dp"
+            android:textColor="@color/black"
+            android:hint="Meyve Adı Giriniz!"/>
+
+        <Button
+            android:id="@+id/buttonChangeFruit"
+            android:layout_width="300dp"
+            android:layout_height="70dp"
+            android:onClick="@{() -> viewmodel.onDisplayEditTextContentClick()}"
+            android:textSize="20sp"
+            android:textAllCaps="false"
+            android:layout_margin="20dp"
+            android:text="Display EditText Content"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/textViewEditTextContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="40dp"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:hint="Content of EditText!"
+            android:background="@color/cardview_shadow_start_color"
+            android:textColor="@color/black"
+            android:text="@{viewmodel.displayedEditTextContent}"/>
+
+        <Button
+            android:id="@+id/buttonRandomFruitForEditText"
+            android:layout_width="350dp"
+            android:layout_height="70dp"
+            android:onClick="@{() -> viewmodel.onSelectRandomEditTextFruit()}"
+            android:textSize="18sp"
+            android:textAllCaps="false"
+            android:layout_margin="20dp"
+            android:text="Select Random Fruit For EditText"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+</layout>

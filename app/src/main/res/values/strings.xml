@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">One and Two Way Binding</string>
+    <string name="random_fruit_name">Random Fruit Name!</string>
+    <string name="change_fruit">Change Fruit</string>
+</resources>
