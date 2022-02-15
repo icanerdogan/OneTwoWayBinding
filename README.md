@@ -1,5 +1,7 @@
-# One & Two Way Binding
-<h3><b> 2nd Week in Logo Yazılım (@logo-group) Intership - ONE &amp; TWO WAY BINDING </b></h3>
+<h1> One & Two Way Binding </h1>
+<h4><b> 2nd Week in Logo Yazılım (@logo-group) Intership - ONE &amp; TWO WAY BINDING </b></h4>
+
+<h2>Öğrendiklerim</h2>
 
 App View          |  
 :-------------------------:|
